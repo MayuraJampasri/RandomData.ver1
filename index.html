@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>RandomData</title>
+  </head>
+  <body>
+    <h1>Random Data</h1>
+    <button onclick="RandomData()">
+      Random
+    </button>
+    <h2>result</h2>
+    <h4 id="random-data"></h4>
+    <script>
+      function RandomData() {
+        const weather = ["Blone", "red", "blown"];
+        const temperature = ["tall", "average", "short"];
+        const humidity = ["heavy", "average", "light"];
+        const windy = ["yes", "no"];
+
+        const randomWeather =
+          weather[Math.floor(Math.random() * weather.length)];
+        const randomTemp =
+          temperature[Math.floor(Math.random() * temperature.length)];
+        const randomHumi =
+          humidity[Math.floor(Math.random() * humidity.length)];
+        const randomWin = windy[Math.floor(Math.random() * windy.length)];
+        document.getElementById("random-data").innerHTML =
+          "Hair : " +
+          randomWeather +
+          "<br>Height : " +
+          randomTemp +
+          "<br>weight : " +
+          randomHumi +
+          "<br>Lotion : " +
+          randomWin;
+        console.log(randomElement);
+      }
+    </script>
+  </body>
+</html>
